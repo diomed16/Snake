@@ -19,7 +19,7 @@ private:
     float m_snakeSize;
     sf::Color m_snakeColor;
     float m_snakeSpeed;
-
+    void handleInput();
     sf::RenderWindow mWindow;
     sf::Time mTimePerFrame;
 

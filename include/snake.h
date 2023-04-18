@@ -15,6 +15,10 @@ class snake
     std::vector <sf::RectangleShape> getBody();
     void update();
     void addSegment();
+    void reset();
+    void draw(sf::RenderWindow&);
+    enum Direction { None, Up, Down, Left, Right };
+    void setDirection(Direction);
 
     protected:
 
@@ -25,11 +29,10 @@ class snake
       sf::RectangleShape snakeSegment;
       sf::RectangleShape head;
       std::vector <sf::RectangleShape>body;
-      enum Direction { Up, Down, Left, Right };
+
       void moveBody();
       void moveHead();
-      void draw();
-      void reset();
+
       Direction direction;
       bool checkWallCollision();
       bool checkFoodCollision(sf::RectangleShape food);
